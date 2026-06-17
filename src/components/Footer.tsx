@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin, Twitter, RadioTower } from "lucide-react";
+import { Instagram, Linkedin } from "lucide-react";
 import { motion } from "motion/react";
 
 export function Footer() {
@@ -25,11 +25,24 @@ export function Footer() {
             <p className="font-barlow text-[#A0AACC] text-[12px] tracking-wide mt-1">Sports. Media. Technology. Investment.</p>
             <p className="font-barlow text-[#A0AACC] text-[12px] tracking-wide mt-4">Dubai, United Arab Emirates</p>
             <div className="flex items-center gap-3 mt-6">
-              {[Instagram, Linkedin, Twitter, RadioTower].map((Icon, idx) => (
-                <div key={idx} className="w-8 h-8 rounded-full border border-pure-white/20 flex items-center justify-center text-pure-white hover:border-gold-accent hover:text-gold-accent transition-colors duration-300 cursor-pointer">
-                  <Icon className="w-5 h-5" />
-                </div>
-              ))}
+              <a
+                href="https://www.instagram.com/sportspiritfed?igsh=MXI5a3hpMTN4bzloZw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="SSF Instagram"
+                className="w-8 h-8 rounded-full border border-pure-white/20 flex items-center justify-center text-pure-white hover:border-gold-accent hover:text-gold-accent transition-colors duration-300"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/ssfeventspro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="SSF LinkedIn"
+                className="w-8 h-8 rounded-full border border-pure-white/20 flex items-center justify-center text-pure-white hover:border-gold-accent hover:text-gold-accent transition-colors duration-300"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
             </div>
           </div>
 

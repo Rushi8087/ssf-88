@@ -114,7 +114,7 @@ export function Hero() {
 }
 
 /** STATS STRIP SECTION */
-function AnimatedNumber({ value }: { value: string }) {
+function AnimatedNumber({ value, light = false }: { value: string; light?: boolean }) {
   const nodeRef = useRef<HTMLHeadingElement>(null);
   const inView = useInView(nodeRef, { once: true, amount: 0.5 });
 
@@ -145,7 +145,7 @@ function AnimatedNumber({ value }: { value: string }) {
   return (
     <h2
       ref={nodeRef}
-      className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-anton text-royal-blue leading-[1.1] mb-4 tracking-tighter whitespace-nowrap drop-shadow-sm"
+      className={`text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-anton leading-[1.1] mb-4 tracking-[0.12em] whitespace-nowrap drop-shadow-lg ${light ? "text-white" : "text-royal-blue"}`}
     >
       {value.replace(/[0-9]+/, "0")}
     </h2>
@@ -175,23 +175,35 @@ function StatsStrip() {
   };
 
   return (
-    <section className="min-h-screen shrink-0 w-full relative bg-pure-white flex items-center justify-center px-8 z-10 py-20">
-      <div className="max-w-[90rem] w-full mx-auto">
+    <section className="min-h-screen shrink-0 w-full relative flex items-center justify-center px-8 z-10 py-20 overflow-hidden">
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        src="/videos/stats-bg.mp4"
+      />
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-deep-navy/40 z-[1]" />
+
+      <div className="max-w-[90rem] w-full mx-auto relative z-10">
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVars}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 divide-y md:divide-y-0 lg:divide-x divide-pale-blue"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-12 divide-y md:divide-y-0 lg:divide-x divide-white/20"
         >
           {stats.map((stat, i) => (
             <motion.div
               key={i}
               variants={itemVars}
-              className="flex flex-col items-center justify-center pt-8 md:pt-0"
+              className="flex flex-col items-center justify-center pt-10 md:pt-0 px-6"
             >
-              <AnimatedNumber value={stat.number} />
-              <p className="font-barlow text-deep-navy font-bold text-xl tracking-[0.1em] uppercase text-center">
+              <AnimatedNumber value={stat.number} light />
+              <p className="font-barlow text-white/80 font-bold text-base tracking-[0.12em] uppercase text-center leading-snug mt-2">
                 {stat.label}
               </p>
             </motion.div>
@@ -670,13 +682,13 @@ function Leadership() {
       name: "Mohammad Saif",
       title: "Founder and MD",
       img: saifImg,
-      linkedin: "https://www.linkedin.com/in/mohammad-saif-0a884814b"
+      linkedin: "https://www.linkedin.com/in/mohammad-saiif-817191143?utm_source=share_via&utm_content=profile&utm_medium=member_android"
     },
     {
       name: "Adil Memon",
       title: "CEO and Managing Partner",
       img: adilImg,
-      linkedin: "https://www.linkedin.com/in/adil-memon-47b19612"
+      linkedin: "https://www.linkedin.com/in/adil-adam-memon-68605a10?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
     },
   ];
 
