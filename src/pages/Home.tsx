@@ -183,7 +183,7 @@ function StatsStrip() {
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
-        src="/videos/stats-bg.mp4"
+        src="https://res.cloudinary.com/dtwrvaa7u/video/upload/stats-bg_eg0oth.mp4"
       />
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-deep-navy/40 z-[1]" />
@@ -983,5 +983,7 @@ export default function Home() {
         <Footer />
       </div>
     </div>
+  );
+}
   );
 }
