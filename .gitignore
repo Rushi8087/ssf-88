@@ -6,4 +6,3 @@ coverage/
 *.log
 .env*
 !.env.example
-public/videos/stats-bg.mp4
