@@ -176,19 +176,19 @@ export default function About() {
             </motion.span>
             <motion.h1 
               variants={fadeInUp}
-              className="text-[48px] md:text-[64px] leading-[1.1] font-anton text-[#0A0E2E] uppercase m-0 mb-6"
+              className="text-[48px] md:text-[64px] leading-[1.1] font-anton text-royal-blue uppercase m-0 mb-6"
             >
               Sport Is a Business.<br className="hidden md:block" /> We Build It That Way.
             </motion.h1>
             <motion.p 
               variants={fadeInUp}
-              className="font-barlow text-[#6B7280] text-[18px] leading-relaxed mb-6 m-0 max-w-3xl"
+              className="font-barlow text-[#0A0E2E] font-medium text-[18px] leading-relaxed mb-6 m-0 max-w-3xl"
             >
               Sport Spirit Fed LLC (SSF) is a Dubai-based sports services company built on one powerful conviction: sport is not an event, it is an asset. We create, develop and commercialise sports IP that generates income and appreciates in value — season after season.
             </motion.p>
             <motion.p 
               variants={fadeInUp}
-              className="font-barlow text-[#6B7280] text-[18px] leading-relaxed mb-6 m-0 max-w-3xl"
+              className="font-barlow text-[#0A0E2E] font-medium text-[18px] leading-relaxed mb-6 m-0 max-w-3xl"
             >
               From the concept table to the live broadcast, SSF manages the full journey. We build leagues. We structure franchises. We create media platforms. We secure investment. And we do it from the most powerful sports city in the world — Dubai.
             </motion.p>
