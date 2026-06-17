@@ -1,0 +1,6 @@
+{
+  "name": "SSF Sports Properties",
+  "description": "A sports services company portfolio and property showcase migrated from GitHub.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

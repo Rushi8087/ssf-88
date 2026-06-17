@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-deep-navy: #0A0E2E;
+  --color-royal-blue: #1B30D6;
+  --color-gold-accent: #C9A84C;
+  --color-pure-white: #FFFFFF;
+  --color-pale-blue: #F0F2F8;
+  --color-mid-grey: #6B7280;
+
+  --font-barlow: 'Barlow', sans-serif;
+  --font-anton: 'Anton', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --font-inter-black: 'Inter', sans-serif;
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+    width: 0;
+    height: 0;
+  }
+}
+
