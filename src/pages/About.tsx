@@ -150,8 +150,14 @@ export default function About() {
   return (
     <div className="bg-pure-white w-full">
       {/* 1. WHO WE ARE */}
-      <section className="snap-start snap-always min-h-[80vh] flex flex-col justify-center bg-pure-white w-full px-8 py-24 md:py-32 pt-32">
-        <div className="max-w-[70rem] mx-auto w-full flex flex-col items-center text-center">
+      <section 
+        className="snap-start snap-always min-h-[80vh] flex flex-col justify-center w-full px-8 py-24 md:py-32 pt-32 relative bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/about-hero-bg.png')" }}
+      >
+        {/* Semi-transparent white overlay to ensure dark text remains readable */}
+        <div className="absolute inset-0 bg-pure-white/40 z-[1]"></div>
+        
+        <div className="max-w-[70rem] mx-auto w-full flex flex-col items-center text-center relative z-10">
           <motion.div 
             initial="hidden"
             whileInView="show"

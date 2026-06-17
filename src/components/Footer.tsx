@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin } from "lucide-react";
+import { Instagram, Linkedin, Youtube } from "lucide-react";
 import { motion } from "motion/react";
 
 export function Footer() {
@@ -42,6 +42,15 @@ export function Footer() {
                 className="w-8 h-8 rounded-full border border-pure-white/20 flex items-center justify-center text-pure-white hover:border-gold-accent hover:text-gold-accent transition-colors duration-300"
               >
                 <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://youtube.com/@ssfeventspro?si=D6qiUEJPGJAxJGVD"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="SSF YouTube"
+                className="w-8 h-8 rounded-full border border-pure-white/20 flex items-center justify-center text-pure-white hover:border-gold-accent hover:text-gold-accent transition-colors duration-300"
+              >
+                <Youtube className="w-5 h-5" />
               </a>
             </div>
           </div>
